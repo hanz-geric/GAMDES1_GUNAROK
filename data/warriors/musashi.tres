@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WarriorData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/warrior_data.gd" id="1_warrior"]
+
+[resource]
+script = ExtResource("1_warrior")
+id = &"musashi"
+display_name = "Miyamoto Musashi"
+homeland = "Japan"
+era = "Edo period, 17th century"
+special_name = "Two Heavens Strike"
+damage_rating = 3
+reach_rating = 2
+speed_rating = 4
+weapon = &"dual_katana"
+headgear = &"topknot"
+skin_color = Color(0.88, 0.72, 0.56, 1)
+hair_color = Color(0.06, 0.05, 0.05, 1)
+primary_color = Color(0.18, 0.2, 0.4, 1)
+secondary_color = Color(0.26, 0.26, 0.3, 1)
+alt_primary_color = Color(0.45, 0.16, 0.16, 1)
+alt_secondary_color = Color(0.3, 0.26, 0.22, 1)
+accent_color = Color(0.85, 0.9, 1, 1)
+bare_arms = false
+bare_torso = false
+bare_shins = false

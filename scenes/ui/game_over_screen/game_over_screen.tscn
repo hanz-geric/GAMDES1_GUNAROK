@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/game_over_screen/game_over_screen.gd" id="1_script"]
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.02, 0.03, 0.96)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.3, 0.25, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 96
+text = "GAME OVER"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Line" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Score" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 36
+text = "SCORE"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueButton" type="Button" parent="Center/VBox"]
+custom_minimum_size = Vector2(360, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CHARACTER SELECT"

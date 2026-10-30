@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WarriorData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/warrior_data.gd" id="1_warrior"]
+
+[resource]
+script = ExtResource("1_warrior")
+id = &"crazy_horse"
+display_name = "Crazy Horse"
+homeland = "Oglala Lakota, Great Plains"
+era = "North America, 19th century"
+special_name = "Warrior's Charge"
+damage_rating = 4
+reach_rating = 2
+speed_rating = 3
+weapon = &"war_club"
+headgear = &"feather"
+skin_color = Color(0.66, 0.45, 0.31, 1)
+hair_color = Color(0.05, 0.04, 0.04, 1)
+primary_color = Color(0.74, 0.6, 0.42, 1)
+secondary_color = Color(0.36, 0.27, 0.2, 1)
+alt_primary_color = Color(0.5, 0.4, 0.3, 1)
+alt_secondary_color = Color(0.2, 0.24, 0.3, 1)
+accent_color = Color(0.9, 0.9, 0.95, 1)
+bare_arms = false
+bare_torso = false
+bare_shins = false

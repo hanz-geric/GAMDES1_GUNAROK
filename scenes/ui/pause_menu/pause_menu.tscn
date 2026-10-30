@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/pause_menu/pause_menu.gd" id="1_pause"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.07, 0.06, 0.11, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.82, 0.3, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+content_margin_left = 30.0
+content_margin_top = 24.0
+content_margin_right = 30.0
+content_margin_bottom = 24.0
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 20
+script = ExtResource("1_pause")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -250.0
+offset_right = 420.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="Root/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Title" type="Label" parent="Root/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 56
+text = "PAUSED"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ResumeButton" type="Button" parent="Root/Panel/VBox"]
+custom_minimum_size = Vector2(320, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="Root/Panel/VBox"]
+custom_minimum_size = Vector2(320, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "RESTART MATCH"
+
+[node name="MenuButton" type="Button" parent="Root/Panel/VBox"]
+custom_minimum_size = Vector2(320, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "QUIT TO MAIN MENU"
+
+[node name="ControlsLabel" type="Label" parent="Root/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "PLAYER 1   Move A / D   Jump W   Crouch S   Punch F   Kick G   Block H   Special T\nPLAYER 2   Arrows   Punch Num 1   Kick Num 2   Block Num 3   Special Num 5\nGAMEPAD   Stick or D-pad   X punch   A kick   LB block   Y special   Start pause"
+horizontal_alignment = 1
+autowrap_mode = 3

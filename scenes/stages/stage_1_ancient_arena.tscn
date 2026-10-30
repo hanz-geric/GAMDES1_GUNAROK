@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/stages/stage.gd" id="1_stage"]
+[ext_resource type="Texture2D" path="res://assets/sprites/stages/stage_1_ancient_arena.png" id="2_background"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(1600, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(40, 1600)
+
+[node name="Stage1AncientArena" type="Node2D"]
+z_index = -10
+script = ExtResource("1_stage")
+stage_name = "Ancient Arena"
+music = &"ancient_arena"
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_background")
+centered = false
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(800, 670)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_floor")
+
+[node name="WallLeft" type="StaticBody2D" parent="."]
+position = Vector2(20, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+position = Vector2(1580, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+shape = SubResource("RectangleShape2D_wall")

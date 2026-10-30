@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CpuTier" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/cpu_tier.gd" id="1_tier"]
+
+[resource]
+script = ExtResource("1_tier")
+tier_name = "Tier 2"
+reaction_delay = 0.5
+block_chance = 0.25
+attack_gap = 1.7
+attack_gap_jitter = 0.3
+min_attack_gap = 0.5
+health = 100
+damage_multiplier = 0.9
+windup_scale = 1.2
+later_round_gap_scale = 0.9
+idle_start_time = 0.0
+retreats_when_ahead = true
+presses_to_corner = false
+special_weight = 0.3

@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scenes/fighter/fighter.gd" id="1_fighter"]
+[ext_resource type="Script" path="res://scenes/fighter/placeholder_rig.gd" id="2_rig"]
+[ext_resource type="Script" path="res://scenes/fighter/hurtbox.gd" id="3_hurtbox"]
+[ext_resource type="Script" path="res://scenes/fighter/hitbox.gd" id="4_hitbox"]
+[ext_resource type="Script" path="res://scenes/fighter/state_machine.gd" id="5_state"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(56, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurt"]
+size = Vector2(52, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hit"]
+size = Vector2(8, 8)
+
+[node name="Fighter" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_fighter")
+
+[node name="BodyShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -85)
+shape = SubResource("RectangleShape2D_body")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -95)
+
+[node name="PlaceholderRig" type="Node2D" parent="."]
+script = ExtResource("2_rig")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_hurtbox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -85)
+shape = SubResource("RectangleShape2D_hurt")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+monitorable = false
+script = ExtResource("4_hitbox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_hit")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("5_state")
+
+[node name="TagLabel" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -258.0
+offset_right = 40.0
+offset_bottom = -228.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "P1"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+max_distance = 3000.0

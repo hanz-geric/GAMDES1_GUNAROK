@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/result_screen/result_screen.gd" id="1_script"]
+
+[node name="ResultScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.07, 0.94)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "VICTORY"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Subtitle" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Detail" type="Label" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.86, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Center/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="PrimaryButton" type="Button" parent="Center/VBox/Buttons"]
+custom_minimum_size = Vector2(360, 56)
+layout_mode = 2
+text = "NEXT MATCH"
+
+[node name="SecondaryButton" type="Button" parent="Center/VBox/Buttons"]
+custom_minimum_size = Vector2(300, 56)
+layout_mode = 2
+text = "QUIT RUN"

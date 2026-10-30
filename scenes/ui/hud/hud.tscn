@@ -1,0 +1,294 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/hud/hud.gd" id="1_hud"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/bar_under.png" id="2_bar_under"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/bar_fill.png" id="3_bar_fill"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_intro"]
+bg_color = Color(0.06, 0.05, 0.1, 0.88)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.82, 0.3, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HealthBar1" type="TextureProgressBar" parent="Root"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 430.0
+offset_bottom = 60.0
+step = 0.01
+value = 100.0
+fill_mode = 0
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("2_bar_under")
+texture_progress = ExtResource("3_bar_fill")
+
+[node name="HealthBar2" type="TextureProgressBar" parent="Root"]
+layout_mode = 1
+offset_left = 850.0
+offset_top = 30.0
+offset_right = 1250.0
+offset_bottom = 60.0
+step = 0.01
+value = 100.0
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("2_bar_under")
+texture_progress = ExtResource("3_bar_fill")
+
+[node name="NameLabel1" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 62.0
+offset_right = 430.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "PLAYER 1"
+horizontal_alignment = 0
+vertical_alignment = 1
+
+[node name="NameLabel2" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 850.0
+offset_top = 62.0
+offset_right = 1250.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "PLAYER 2"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RoundMarkers1" type="HBoxContainer" parent="Root"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 94.0
+offset_right = 180.0
+offset_bottom = 108.0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="RoundMarkers2" type="HBoxContainer" parent="Root"]
+layout_mode = 1
+offset_left = 1100.0
+offset_top = 94.0
+offset_right = 1250.0
+offset_bottom = 108.0
+mouse_filter = 2
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="MeterBar1" type="TextureProgressBar" parent="Root"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 116.0
+offset_right = 290.0
+offset_bottom = 132.0
+step = 0.01
+value = 0.0
+fill_mode = 0
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("2_bar_under")
+texture_progress = ExtResource("3_bar_fill")
+
+[node name="Mark" type="ColorRect" parent="Root/MeterBar1"]
+layout_mode = 1
+offset_left = 129.0
+offset_top = -3.0
+offset_right = 132.0
+offset_bottom = 19.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.9)
+
+[node name="MeterBar2" type="TextureProgressBar" parent="Root"]
+layout_mode = 1
+offset_left = 990.0
+offset_top = 116.0
+offset_right = 1250.0
+offset_bottom = 132.0
+step = 0.01
+value = 0.0
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("2_bar_under")
+texture_progress = ExtResource("3_bar_fill")
+
+[node name="Mark" type="ColorRect" parent="Root/MeterBar2"]
+layout_mode = 1
+offset_left = 128.0
+offset_top = -3.0
+offset_right = 131.0
+offset_bottom = 19.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.9)
+
+[node name="ReadyLabel1" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 298.0
+offset_top = 110.0
+offset_right = 520.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(1, 0.9, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "SPECIAL READY"
+horizontal_alignment = 0
+vertical_alignment = 1
+
+[node name="ReadyLabel2" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 760.0
+offset_top = 110.0
+offset_right = 982.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(1, 0.9, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "SPECIAL READY"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 570.0
+offset_top = 18.0
+offset_right = 710.0
+offset_bottom = 88.0
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 56
+text = "60"
+horizontal_alignment = 1
+vertical_alignment = 1
+pivot_offset = Vector2(70, 35)
+
+[node name="InfoLabel" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 420.0
+offset_top = 88.0
+offset_right = 860.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.9, 0.88, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Announcer" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 104
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+pivot_offset = Vector2(640, 70)
+
+[node name="SubAnnouncer" type="Label" parent="Root"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 360.0
+offset_right = 1280.0
+offset_bottom = 412.0
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IntroCard" type="Panel" parent="Root"]
+layout_mode = 1
+offset_left = 290.0
+offset_top = 190.0
+offset_right = 990.0
+offset_bottom = 420.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_intro")
+
+[node name="IntroTitle" type="Label" parent="Root/IntroCard"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 22.0
+offset_right = 700.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "MATCH 1   VS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IntroName" type="Label" parent="Root/IntroCard"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 66.0
+offset_right = 700.0
+offset_bottom = 150.0
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 64
+text = "OPPONENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IntroOrigin" type="Label" parent="Root/IntroCard"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 156.0
+offset_right = 700.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "Homeland  |  Era"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/match/match.gd" id="1_match"]
+[ext_resource type="PackedScene" path="res://scenes/fighter/fighter.tscn" id="2_fighter"]
+[ext_resource type="Script" path="res://scenes/match/camera_rig.gd" id="3_camera"]
+[ext_resource type="Script" path="res://scenes/match/round_manager.gd" id="4_round_manager"]
+[ext_resource type="Script" path="res://scenes/match/round_timer.gd" id="5_round_timer"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud/hud.tscn" id="6_hud"]
+
+[node name="Match" type="Node2D"]
+script = ExtResource("1_match")
+
+[node name="Effects" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Fighter1" parent="." instance=ExtResource("2_fighter")]
+position = Vector2(570, 620)
+
+[node name="Fighter2" parent="." instance=ExtResource("2_fighter")]
+position = Vector2(1030, 620)
+
+[node name="CameraRig" type="Camera2D" parent="."]
+position = Vector2(800, 360)
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 720
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+script = ExtResource("3_camera")
+
+[node name="RoundManager" type="Node" parent="."]
+script = ExtResource("4_round_manager")
+
+[node name="RoundTimer" type="Timer" parent="RoundManager"]
+script = ExtResource("5_round_timer")
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]

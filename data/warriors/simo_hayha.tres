@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="WarriorData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/warrior_data.gd" id="1_warrior"]
+
+[resource]
+script = ExtResource("1_warrior")
+id = &"simo_hayha"
+display_name = "Simo Häyhä"
+homeland = "Finland"
+era = "20th century"
+special_name = "White Death"
+damage_rating = 2
+reach_rating = 5
+speed_rating = 2
+special_reach_bonus = 260.0
+weapon = &"rifle"
+headgear = &"winter_cap"
+skin_color = Color(0.95, 0.82, 0.72, 1)
+hair_color = Color(0.6, 0.45, 0.3, 1)
+primary_color = Color(0.92, 0.94, 0.96, 1)
+secondary_color = Color(0.86, 0.88, 0.9, 1)
+alt_primary_color = Color(0.5, 0.55, 0.42, 1)
+alt_secondary_color = Color(0.42, 0.46, 0.36, 1)
+accent_color = Color(1, 0.9, 0.6, 1)
+bare_arms = false
+bare_torso = false
+bare_shins = false

@@ -1,0 +1,18 @@
+# Godot 4 cache and imports (regenerated when the project is opened)
+.godot/
+/android/
+
+# Exports
+/builds/
+*.exe
+*.pck
+*.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+
+# Python tools
+__pycache__/
