@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://fr2qn2sfhx4v"]
 
-[ext_resource type="Script" path="res://scenes/ui/main_menu/main_menu.gd" id="1_menu"]
-[ext_resource type="Texture2D" path="res://assets/sprites/ui/menu_background.png" id="2_background"]
+[ext_resource type="Script" uid="uid://b48wb6emt34tl" path="res://scenes/ui/main_menu/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://dvgtaky83nl1j" path="res://assets/background/background.png" id="2_e8t4i"]
+[ext_resource type="Texture2D" uid="uid://bwe8trjuvfa8o" path="res://assets/fonts/GUNAROK Pixel Battle Logo.png" id="3_qt1dd"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1298618492]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,23 +13,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=70897427]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_background")
+texture = ExtResource("2_e8t4i")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1392402279]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 60.0
-offset_bottom = 200.0
+offset_left = -1226.0
+offset_top = 206.0
+offset_right = -1226.0
+offset_bottom = 371.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
 theme_override_colors/font_outline_color = Color(0.2, 0.06, 0, 1)
@@ -38,12 +43,14 @@ text = "GUNAROK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tagline" type="Label" parent="."]
+[node name="Tagline" type="Label" parent="." unique_id=1089337205]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 196.0
-offset_bottom = 236.0
+offset_left = -1272.0
+offset_top = 391.0
+offset_right = -1338.0
+offset_bottom = 431.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 8
@@ -51,7 +58,17 @@ theme_override_font_sizes/font_size = 26
 text = "History's greatest warriors. One arena. One god."
 horizontal_alignment = 1
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="Gunarok Title" type="TextureRect" parent="." unique_id=955946970]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 55.0
+offset_right = 1025.0
+offset_bottom = 346.0
+texture = ExtResource("3_qt1dd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=71133764]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,29 +83,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="ArcadeButton" type="Button" parent="Buttons"]
+[node name="ArcadeButton" type="Button" parent="Buttons" unique_id=1076627905]
 custom_minimum_size = Vector2(360, 60)
 layout_mode = 2
 text = "ARCADE"
 
-[node name="VersusButton" type="Button" parent="Buttons"]
+[node name="VersusButton" type="Button" parent="Buttons" unique_id=555698179]
 custom_minimum_size = Vector2(360, 60)
 layout_mode = 2
 text = "2-PLAYER VERSUS"
 
-[node name="QuitButton" type="Button" parent="Buttons"]
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=243314441]
 custom_minimum_size = Vector2(360, 60)
 layout_mode = 2
 text = "QUIT"
 
-[node name="Footer" type="Label" parent="."]
+[node name="Footer" type="Label" parent="." unique_id=1465766115]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -56.0
-offset_bottom = -20.0
+offset_left = -1154.0
+offset_top = -118.0
+offset_right = -1343.0
+offset_bottom = -82.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.85, 0.82, 0.75, 1)

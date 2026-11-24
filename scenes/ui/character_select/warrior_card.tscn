@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://bp8k4sjh4x54s"]
 
-[ext_resource type="Script" path="res://scenes/ui/character_select/warrior_card.gd" id="1_card"]
-[ext_resource type="Script" path="res://scenes/fighter/placeholder_rig.gd" id="2_rig"]
+[ext_resource type="Script" uid="uid://bdcp0rfabf36x" path="res://scenes/ui/character_select/warrior_card.gd" id="1_card"]
+[ext_resource type="Script" uid="uid://cybo2h8tvd0v3" path="res://scenes/fighter/placeholder_rig.gd" id="2_rig"]
 
-[node name="WarriorCard" type="Panel"]
+[node name="WarriorCard" type="Panel" unique_id=1485980854]
 custom_minimum_size = Vector2(170, 200)
 clip_contents = true
 script = ExtResource("1_card")
 
-[node name="Rig" type="Node2D" parent="."]
+[node name="Rig" type="Node2D" parent="." unique_id=1106009706]
 position = Vector2(85, 166)
 scale = Vector2(0.62, 0.62)
 script = ExtResource("2_rig")
 
-[node name="NameLabel" type="Label" parent="."]
+[node name="NameLabel" type="Label" parent="." unique_id=1899617291]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -31,7 +31,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text_overrun_behavior = 3
 
-[node name="P1Marker" type="Label" parent="."]
+[node name="P1Marker" type="Label" parent="." unique_id=1053650892]
 visible = false
 layout_mode = 1
 offset_left = 8.0
@@ -43,7 +43,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 18
 text = "P1"
 
-[node name="P2Marker" type="Label" parent="."]
+[node name="P2Marker" type="Label" parent="." unique_id=1813639466]
 visible = false
 layout_mode = 1
 anchors_preset = 1

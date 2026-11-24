@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://bwt1wlfxygody"]
 
-[ext_resource type="Script" path="res://scenes/ui/character_select/character_select.gd" id="1_select"]
-[ext_resource type="Texture2D" path="res://assets/sprites/ui/menu_background.png" id="2_background"]
+[ext_resource type="Script" uid="uid://byr4jc8lmgd04" path="res://scenes/ui/character_select/character_select.gd" id="1_select"]
+[ext_resource type="Texture2D" uid="uid://bxiir6yw2sis7" path="res://assets/sprites/ui/menu_background.png" id="2_background"]
 
-[node name="CharacterSelect" type="Control"]
+[node name="CharacterSelect" type="Control" unique_id=469287079]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_select")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=2122603021]
 modulate = Color(0.55, 0.5, 0.6, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -24,7 +24,7 @@ texture = ExtResource("2_background")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=234447488]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -38,7 +38,7 @@ theme_override_font_sizes/font_size = 48
 text = "CHOOSE YOUR WARRIOR"
 horizontal_alignment = 1
 
-[node name="ModeLabel" type="Label" parent="."]
+[node name="ModeLabel" type="Label" parent="." unique_id=621857861]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 20
 text = "ARCADE"
 horizontal_alignment = 1
 
-[node name="Grid" type="GridContainer" parent="."]
+[node name="Grid" type="GridContainer" parent="." unique_id=518004095]
 layout_mode = 1
 offset_left = 282.0
 offset_top = 130.0
@@ -61,7 +61,7 @@ theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 12
 columns = 4
 
-[node name="P1InfoBg" type="ColorRect" parent="."]
+[node name="P1InfoBg" type="ColorRect" parent="." unique_id=1749717710]
 layout_mode = 1
 offset_left = 14.0
 offset_top = 120.0
@@ -69,7 +69,7 @@ offset_right = 268.0
 offset_bottom = 566.0
 color = Color(0.05, 0.04, 0.08, 0.82)
 
-[node name="P1Info" type="VBoxContainer" parent="."]
+[node name="P1Info" type="VBoxContainer" parent="." unique_id=1275644626]
 layout_mode = 1
 offset_left = 24.0
 offset_top = 132.0
@@ -77,65 +77,55 @@ offset_right = 258.0
 offset_bottom = 560.0
 theme_override_constants/separation = 12
 
-[node name="Header" type="Label" parent="P1Info"]
+[node name="Header" type="Label" parent="P1Info" unique_id=511423350]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.35, 0.75, 1, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 20
 text = "PLAYER"
-horizontal_alignment = 0
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="P1Info"]
+[node name="Name" type="Label" parent="P1Info" unique_id=873219665]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 28
 text = "NAME"
-horizontal_alignment = 0
 autowrap_mode = 3
 
-[node name="Origin" type="Label" parent="P1Info"]
+[node name="Origin" type="Label" parent="P1Info" unique_id=1743799733]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 17
-text = ""
-horizontal_alignment = 0
 autowrap_mode = 3
 
-[node name="Stats" type="Label" parent="P1Info"]
+[node name="Stats" type="Label" parent="P1Info" unique_id=1950936465]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.9, 0.6, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 19
-text = ""
-horizontal_alignment = 0
 
-[node name="Special" type="Label" parent="P1Info"]
+[node name="Special" type="Label" parent="P1Info" unique_id=1747041733]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 17
-text = ""
-horizontal_alignment = 0
 autowrap_mode = 3
 
-[node name="Status" type="Label" parent="P1Info"]
+[node name="Status" type="Label" parent="P1Info" unique_id=297566194]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 20
-text = ""
-horizontal_alignment = 0
 autowrap_mode = 3
 
-[node name="P2InfoBg" type="ColorRect" parent="."]
+[node name="P2InfoBg" type="ColorRect" parent="." unique_id=436068345]
 layout_mode = 1
 offset_left = 1012.0
 offset_top = 120.0
@@ -143,7 +133,7 @@ offset_right = 1266.0
 offset_bottom = 566.0
 color = Color(0.05, 0.04, 0.08, 0.82)
 
-[node name="P2Info" type="VBoxContainer" parent="."]
+[node name="P2Info" type="VBoxContainer" parent="." unique_id=1237665634]
 layout_mode = 1
 offset_left = 1022.0
 offset_top = 132.0
@@ -151,7 +141,7 @@ offset_right = 1256.0
 offset_bottom = 560.0
 theme_override_constants/separation = 12
 
-[node name="Header" type="Label" parent="P2Info"]
+[node name="Header" type="Label" parent="P2Info" unique_id=1267667506]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.55, 0.2, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
@@ -161,7 +151,7 @@ text = "PLAYER"
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="P2Info"]
+[node name="Name" type="Label" parent="P2Info" unique_id=481995989]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
@@ -170,46 +160,42 @@ text = "NAME"
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="Origin" type="Label" parent="P2Info"]
+[node name="Origin" type="Label" parent="P2Info" unique_id=1934906692]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 17
-text = ""
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="Stats" type="Label" parent="P2Info"]
+[node name="Stats" type="Label" parent="P2Info" unique_id=1886384914]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.9, 0.6, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 19
-text = ""
 horizontal_alignment = 2
 
-[node name="Special" type="Label" parent="P2Info"]
+[node name="Special" type="Label" parent="P2Info" unique_id=2076524968]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 17
-text = ""
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="Status" type="Label" parent="P2Info"]
+[node name="Status" type="Label" parent="P2Info" unique_id=2112132259]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.84, 0.35, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 20
-text = ""
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="StageLabel" type="Label" parent="."]
+[node name="StageLabel" type="Label" parent="." unique_id=979529517]
 layout_mode = 1
 offset_left = 282.0
 offset_top = 572.0
@@ -222,7 +208,7 @@ text = "STAGE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HintLabel" type="Label" parent="."]
+[node name="HintLabel" type="Label" parent="." unique_id=1849666216]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
