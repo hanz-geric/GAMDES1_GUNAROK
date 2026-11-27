@@ -1,0 +1,328 @@
+file,champion,animation,frames,layout,background,effects_drawn_in
+sheets/leonidas/cutin.png,leonidas,cutin,1,single image,light gray,no
+sheets/leonidas/idle.png,leonidas,idle,4,2x2,light gray,no
+sheets/leonidas/walk.png,leonidas,walk,6,3x2,light gray,no
+sheets/leonidas/jump.png,leonidas,jump,4,2x2,light gray,no
+sheets/leonidas/crouch.png,leonidas,crouch,2,1 row,light gray,no
+sheets/leonidas/block.png,leonidas,block,2,1 row,light gray,no
+sheets/leonidas/crouch_block.png,leonidas,crouch_block,2,1 row,light gray,no
+sheets/leonidas/hitstun.png,leonidas,hitstun,2,1 row,light gray,no
+sheets/leonidas/knockdown.png,leonidas,knockdown,4,2x2,light gray,no
+sheets/leonidas/getup.png,leonidas,getup,3,1 row,light gray,no
+sheets/leonidas/ko.png,leonidas,ko,4,2x2,light gray,no
+sheets/leonidas/victory.png,leonidas,victory,4,2x2,light gray,no
+sheets/leonidas/parry.png,leonidas,parry,3,1 row,light gray,no
+sheets/leonidas/parry_fail.png,leonidas,parry_fail,3,1 row,light gray,no
+sheets/leonidas/parried.png,leonidas,parried,3,1 row,light gray,no
+sheets/leonidas/grabbed.png,leonidas,grabbed,2,1 row,light gray,no
+sheets/leonidas/light.png,leonidas,light,4,2x2,light gray,yes
+sheets/leonidas/heavy.png,leonidas,heavy,6,3x2,light gray,yes
+sheets/leonidas/seize.png,leonidas,seize,5,3 top + 2 bottom,light gray,no
+sheets/leonidas/seize_throw.png,leonidas,seize_throw,6,3x2,light gray,no
+sheets/leonidas/crouch_light.png,leonidas,crouch_light,3,1 row,light gray,yes
+sheets/leonidas/crouch_heavy.png,leonidas,crouch_heavy,4,2x2,light gray,yes
+sheets/leonidas/skill_ground.png,leonidas,skill_ground,6,3x2,light gray,yes
+sheets/leonidas/skill_air.png,leonidas,skill_air,6,3x2,light gray,yes
+sheets/leonidas/skill_low.png,leonidas,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/leonidas/ultimate_1.png,leonidas,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/leonidas/ultimate_2.png,leonidas,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/caesar/cutin.png,caesar,cutin,1,single image,light gray,no
+sheets/caesar/idle.png,caesar,idle,4,2x2,light gray,no
+sheets/caesar/walk.png,caesar,walk,6,3x2,light gray,no
+sheets/caesar/jump.png,caesar,jump,4,2x2,light gray,no
+sheets/caesar/crouch.png,caesar,crouch,2,1 row,light gray,no
+sheets/caesar/block.png,caesar,block,2,1 row,light gray,no
+sheets/caesar/crouch_block.png,caesar,crouch_block,2,1 row,light gray,no
+sheets/caesar/hitstun.png,caesar,hitstun,2,1 row,light gray,no
+sheets/caesar/knockdown.png,caesar,knockdown,4,2x2,light gray,no
+sheets/caesar/getup.png,caesar,getup,3,1 row,light gray,no
+sheets/caesar/ko.png,caesar,ko,4,2x2,light gray,no
+sheets/caesar/victory.png,caesar,victory,4,2x2,light gray,no
+sheets/caesar/parry.png,caesar,parry,3,1 row,light gray,no
+sheets/caesar/parry_fail.png,caesar,parry_fail,3,1 row,light gray,no
+sheets/caesar/parried.png,caesar,parried,3,1 row,light gray,no
+sheets/caesar/grabbed.png,caesar,grabbed,2,1 row,light gray,no
+sheets/caesar/light.png,caesar,light,4,2x2,light gray,yes
+sheets/caesar/heavy.png,caesar,heavy,6,3x2,light gray,yes
+sheets/caesar/seize.png,caesar,seize,5,3 top + 2 bottom,light gray,no
+sheets/caesar/seize_throw.png,caesar,seize_throw,6,3x2,light gray,no
+sheets/caesar/crouch_light.png,caesar,crouch_light,3,1 row,light gray,yes
+sheets/caesar/crouch_heavy.png,caesar,crouch_heavy,4,2x2,light gray,yes
+sheets/caesar/skill_ground.png,caesar,skill_ground,6,3x2,light gray,yes
+sheets/caesar/skill_air.png,caesar,skill_air,6,3x2,light gray,yes
+sheets/caesar/skill_low.png,caesar,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/caesar/ultimate_1.png,caesar,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/caesar/ultimate_2.png,caesar,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/ragnar/cutin.png,ragnar,cutin,1,single image,light gray,no
+sheets/ragnar/idle.png,ragnar,idle,4,2x2,light gray,no
+sheets/ragnar/walk.png,ragnar,walk,6,3x2,light gray,no
+sheets/ragnar/jump.png,ragnar,jump,4,2x2,light gray,no
+sheets/ragnar/crouch.png,ragnar,crouch,2,1 row,light gray,no
+sheets/ragnar/block.png,ragnar,block,2,1 row,light gray,no
+sheets/ragnar/crouch_block.png,ragnar,crouch_block,2,1 row,light gray,no
+sheets/ragnar/hitstun.png,ragnar,hitstun,2,1 row,light gray,no
+sheets/ragnar/knockdown.png,ragnar,knockdown,4,2x2,light gray,no
+sheets/ragnar/getup.png,ragnar,getup,3,1 row,light gray,no
+sheets/ragnar/ko.png,ragnar,ko,4,2x2,light gray,no
+sheets/ragnar/victory.png,ragnar,victory,4,2x2,light gray,no
+sheets/ragnar/parry.png,ragnar,parry,3,1 row,light gray,no
+sheets/ragnar/parry_fail.png,ragnar,parry_fail,3,1 row,light gray,no
+sheets/ragnar/parried.png,ragnar,parried,3,1 row,light gray,no
+sheets/ragnar/grabbed.png,ragnar,grabbed,2,1 row,light gray,no
+sheets/ragnar/light.png,ragnar,light,4,2x2,light gray,yes
+sheets/ragnar/heavy.png,ragnar,heavy,6,3x2,light gray,yes
+sheets/ragnar/seize.png,ragnar,seize,5,3 top + 2 bottom,light gray,no
+sheets/ragnar/seize_throw.png,ragnar,seize_throw,6,3x2,light gray,no
+sheets/ragnar/crouch_light.png,ragnar,crouch_light,3,1 row,light gray,yes
+sheets/ragnar/crouch_heavy.png,ragnar,crouch_heavy,4,2x2,light gray,yes
+sheets/ragnar/skill_ground.png,ragnar,skill_ground,6,3x2,light gray,no
+sheets/ragnar/skill_air.png,ragnar,skill_air,6,3x2,light gray,yes
+sheets/ragnar/skill_low.png,ragnar,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/ragnar/ultimate_1.png,ragnar,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/ragnar/ultimate_2.png,ragnar,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/musashi/cutin.png,musashi,cutin,1,single image,light gray,no
+sheets/musashi/idle.png,musashi,idle,4,2x2,light gray,no
+sheets/musashi/walk.png,musashi,walk,6,3x2,light gray,no
+sheets/musashi/jump.png,musashi,jump,4,2x2,light gray,no
+sheets/musashi/crouch.png,musashi,crouch,2,1 row,light gray,no
+sheets/musashi/block.png,musashi,block,2,1 row,light gray,no
+sheets/musashi/crouch_block.png,musashi,crouch_block,2,1 row,light gray,no
+sheets/musashi/hitstun.png,musashi,hitstun,2,1 row,light gray,no
+sheets/musashi/knockdown.png,musashi,knockdown,4,2x2,light gray,no
+sheets/musashi/getup.png,musashi,getup,3,1 row,light gray,no
+sheets/musashi/ko.png,musashi,ko,4,2x2,light gray,no
+sheets/musashi/victory.png,musashi,victory,4,2x2,light gray,no
+sheets/musashi/parry.png,musashi,parry,3,1 row,light gray,no
+sheets/musashi/parry_fail.png,musashi,parry_fail,3,1 row,light gray,no
+sheets/musashi/parried.png,musashi,parried,3,1 row,light gray,no
+sheets/musashi/grabbed.png,musashi,grabbed,2,1 row,light gray,no
+sheets/musashi/light.png,musashi,light,4,2x2,light gray,yes
+sheets/musashi/heavy.png,musashi,heavy,6,3x2,light gray,yes
+sheets/musashi/seize.png,musashi,seize,5,3 top + 2 bottom,light gray,no
+sheets/musashi/seize_throw.png,musashi,seize_throw,6,3x2,light gray,no
+sheets/musashi/crouch_light.png,musashi,crouch_light,3,1 row,light gray,yes
+sheets/musashi/crouch_heavy.png,musashi,crouch_heavy,4,2x2,light gray,yes
+sheets/musashi/skill_ground.png,musashi,skill_ground,6,3x2,light gray,yes
+sheets/musashi/skill_air.png,musashi,skill_air,6,3x2,light gray,yes
+sheets/musashi/skill_low.png,musashi,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/musashi/ultimate_1.png,musashi,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/musashi/ultimate_2.png,musashi,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/lapulapu/cutin.png,lapulapu,cutin,1,single image,light gray,no
+sheets/lapulapu/idle.png,lapulapu,idle,4,2x2,light gray,no
+sheets/lapulapu/walk.png,lapulapu,walk,6,3x2,light gray,no
+sheets/lapulapu/jump.png,lapulapu,jump,4,2x2,light gray,no
+sheets/lapulapu/crouch.png,lapulapu,crouch,2,1 row,light gray,no
+sheets/lapulapu/block.png,lapulapu,block,2,1 row,light gray,no
+sheets/lapulapu/crouch_block.png,lapulapu,crouch_block,2,1 row,light gray,no
+sheets/lapulapu/hitstun.png,lapulapu,hitstun,2,1 row,light gray,no
+sheets/lapulapu/knockdown.png,lapulapu,knockdown,4,2x2,light gray,no
+sheets/lapulapu/getup.png,lapulapu,getup,3,1 row,light gray,no
+sheets/lapulapu/ko.png,lapulapu,ko,4,2x2,light gray,no
+sheets/lapulapu/victory.png,lapulapu,victory,4,2x2,light gray,no
+sheets/lapulapu/parry.png,lapulapu,parry,3,1 row,light gray,no
+sheets/lapulapu/parry_fail.png,lapulapu,parry_fail,3,1 row,light gray,no
+sheets/lapulapu/parried.png,lapulapu,parried,3,1 row,light gray,no
+sheets/lapulapu/grabbed.png,lapulapu,grabbed,2,1 row,light gray,no
+sheets/lapulapu/light.png,lapulapu,light,4,2x2,light gray,yes
+sheets/lapulapu/heavy.png,lapulapu,heavy,6,3x2,light gray,yes
+sheets/lapulapu/seize.png,lapulapu,seize,5,3 top + 2 bottom,light gray,no
+sheets/lapulapu/seize_throw.png,lapulapu,seize_throw,6,3x2,light gray,no
+sheets/lapulapu/crouch_light.png,lapulapu,crouch_light,3,1 row,light gray,yes
+sheets/lapulapu/crouch_heavy.png,lapulapu,crouch_heavy,4,2x2,light gray,yes
+sheets/lapulapu/skill_ground.png,lapulapu,skill_ground,6,3x2,light gray,yes
+sheets/lapulapu/skill_air.png,lapulapu,skill_air,6,3x2,light gray,yes
+sheets/lapulapu/skill_low.png,lapulapu,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/lapulapu/ultimate_1.png,lapulapu,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/lapulapu/ultimate_2.png,lapulapu,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/simo/cutin.png,simo,cutin,1,single image,dark green #1E5A32,no
+sheets/simo/idle.png,simo,idle,4,2x2,dark green #1E5A32,no
+sheets/simo/walk.png,simo,walk,6,3x2,dark green #1E5A32,no
+sheets/simo/jump.png,simo,jump,4,2x2,dark green #1E5A32,no
+sheets/simo/crouch.png,simo,crouch,2,1 row,dark green #1E5A32,no
+sheets/simo/block.png,simo,block,2,1 row,dark green #1E5A32,no
+sheets/simo/crouch_block.png,simo,crouch_block,2,1 row,dark green #1E5A32,no
+sheets/simo/hitstun.png,simo,hitstun,2,1 row,dark green #1E5A32,no
+sheets/simo/knockdown.png,simo,knockdown,4,2x2,dark green #1E5A32,no
+sheets/simo/getup.png,simo,getup,3,1 row,dark green #1E5A32,no
+sheets/simo/ko.png,simo,ko,4,2x2,dark green #1E5A32,no
+sheets/simo/victory.png,simo,victory,4,2x2,dark green #1E5A32,no
+sheets/simo/parry.png,simo,parry,3,1 row,dark green #1E5A32,no
+sheets/simo/parry_fail.png,simo,parry_fail,3,1 row,dark green #1E5A32,no
+sheets/simo/parried.png,simo,parried,3,1 row,dark green #1E5A32,no
+sheets/simo/grabbed.png,simo,grabbed,2,1 row,dark green #1E5A32,no
+sheets/simo/light.png,simo,light,4,2x2,dark green #1E5A32,no
+sheets/simo/heavy.png,simo,heavy,6,3x2,dark green #1E5A32,yes
+sheets/simo/seize.png,simo,seize,5,3 top + 2 bottom,dark green #1E5A32,no
+sheets/simo/seize_throw.png,simo,seize_throw,6,3x2,dark green #1E5A32,no
+sheets/simo/crouch_light.png,simo,crouch_light,3,1 row,dark green #1E5A32,no
+sheets/simo/crouch_heavy.png,simo,crouch_heavy,4,2x2,dark green #1E5A32,no
+sheets/simo/skill_ground.png,simo,skill_ground,6,3x2,dark green #1E5A32,yes
+sheets/simo/skill_air.png,simo,skill_air,6,3x2,dark green #1E5A32,no
+sheets/simo/skill_low.png,simo,skill_low,5,3 top + 2 bottom,dark green #1E5A32,yes
+sheets/simo/ultimate_1.png,simo,ultimate_1,5,3 top + 2 bottom,dark green #1E5A32,no
+sheets/simo/ultimate_2.png,simo,ultimate_2,5,3 top + 2 bottom,dark green #1E5A32,yes
+sheets/naikhanomtom/cutin.png,naikhanomtom,cutin,1,single image,light gray,no
+sheets/naikhanomtom/idle.png,naikhanomtom,idle,4,2x2,light gray,no
+sheets/naikhanomtom/walk.png,naikhanomtom,walk,6,3x2,light gray,no
+sheets/naikhanomtom/jump.png,naikhanomtom,jump,4,2x2,light gray,no
+sheets/naikhanomtom/crouch.png,naikhanomtom,crouch,2,1 row,light gray,no
+sheets/naikhanomtom/block.png,naikhanomtom,block,2,1 row,light gray,no
+sheets/naikhanomtom/crouch_block.png,naikhanomtom,crouch_block,2,1 row,light gray,no
+sheets/naikhanomtom/hitstun.png,naikhanomtom,hitstun,2,1 row,light gray,no
+sheets/naikhanomtom/knockdown.png,naikhanomtom,knockdown,4,2x2,light gray,no
+sheets/naikhanomtom/getup.png,naikhanomtom,getup,3,1 row,light gray,no
+sheets/naikhanomtom/ko.png,naikhanomtom,ko,4,2x2,light gray,no
+sheets/naikhanomtom/victory.png,naikhanomtom,victory,4,2x2,light gray,no
+sheets/naikhanomtom/parry.png,naikhanomtom,parry,3,1 row,light gray,no
+sheets/naikhanomtom/parry_fail.png,naikhanomtom,parry_fail,3,1 row,light gray,no
+sheets/naikhanomtom/parried.png,naikhanomtom,parried,3,1 row,light gray,no
+sheets/naikhanomtom/grabbed.png,naikhanomtom,grabbed,2,1 row,light gray,no
+sheets/naikhanomtom/light.png,naikhanomtom,light,4,2x2,light gray,no
+sheets/naikhanomtom/heavy.png,naikhanomtom,heavy,6,3x2,light gray,no
+sheets/naikhanomtom/seize.png,naikhanomtom,seize,5,3 top + 2 bottom,light gray,no
+sheets/naikhanomtom/seize_throw.png,naikhanomtom,seize_throw,6,3x2,light gray,no
+sheets/naikhanomtom/crouch_light.png,naikhanomtom,crouch_light,3,1 row,light gray,no
+sheets/naikhanomtom/crouch_heavy.png,naikhanomtom,crouch_heavy,4,2x2,light gray,no
+sheets/naikhanomtom/skill_ground.png,naikhanomtom,skill_ground,6,3x2,light gray,no
+sheets/naikhanomtom/skill_air.png,naikhanomtom,skill_air,6,3x2,light gray,no
+sheets/naikhanomtom/skill_low.png,naikhanomtom,skill_low,5,3 top + 2 bottom,light gray,no
+sheets/naikhanomtom/ultimate_1.png,naikhanomtom,ultimate_1,5,3 top + 2 bottom,light gray,no
+sheets/naikhanomtom/ultimate_2.png,naikhanomtom,ultimate_2,5,3 top + 2 bottom,light gray,no
+sheets/zeus/cutin.png,zeus,cutin,1,single image,dark green #1E5A32,no
+sheets/zeus/idle.png,zeus,idle,4,2x2,dark green #1E5A32,no
+sheets/zeus/walk.png,zeus,walk,6,3x2,dark green #1E5A32,no
+sheets/zeus/jump.png,zeus,jump,4,2x2,dark green #1E5A32,no
+sheets/zeus/crouch.png,zeus,crouch,2,1 row,dark green #1E5A32,no
+sheets/zeus/block.png,zeus,block,2,1 row,dark green #1E5A32,no
+sheets/zeus/crouch_block.png,zeus,crouch_block,2,1 row,dark green #1E5A32,no
+sheets/zeus/hitstun.png,zeus,hitstun,2,1 row,dark green #1E5A32,no
+sheets/zeus/knockdown.png,zeus,knockdown,4,2x2,dark green #1E5A32,no
+sheets/zeus/getup.png,zeus,getup,3,1 row,dark green #1E5A32,no
+sheets/zeus/ko.png,zeus,ko,4,2x2,dark green #1E5A32,no
+sheets/zeus/victory.png,zeus,victory,4,2x2,dark green #1E5A32,no
+sheets/zeus/parry.png,zeus,parry,3,1 row,dark green #1E5A32,no
+sheets/zeus/parry_fail.png,zeus,parry_fail,3,1 row,dark green #1E5A32,no
+sheets/zeus/parried.png,zeus,parried,3,1 row,dark green #1E5A32,no
+sheets/zeus/grabbed.png,zeus,grabbed,2,1 row,dark green #1E5A32,no
+sheets/zeus/light.png,zeus,light,4,2x2,dark green #1E5A32,no
+sheets/zeus/heavy.png,zeus,heavy,6,3x2,dark green #1E5A32,no
+sheets/zeus/seize.png,zeus,seize,5,3 top + 2 bottom,dark green #1E5A32,no
+sheets/zeus/seize_throw.png,zeus,seize_throw,6,3x2,dark green #1E5A32,no
+sheets/zeus/crouch_light.png,zeus,crouch_light,3,1 row,dark green #1E5A32,no
+sheets/zeus/crouch_heavy.png,zeus,crouch_heavy,4,2x2,dark green #1E5A32,no
+sheets/zeus/skill_ground.png,zeus,skill_ground,6,3x2,dark green #1E5A32,no
+sheets/zeus/skill_air.png,zeus,skill_air,6,3x2,dark green #1E5A32,no
+sheets/zeus/skill_low.png,zeus,skill_low,5,3 top + 2 bottom,dark green #1E5A32,no
+sheets/zeus/ultimate_1.png,zeus,ultimate_1,5,3 top + 2 bottom,dark green #1E5A32,yes
+sheets/zeus/ultimate_2.png,zeus,ultimate_2,5,3 top + 2 bottom,dark green #1E5A32,no
+sheets/thor/cutin.png,thor,cutin,1,single image,light gray,no
+sheets/thor/idle.png,thor,idle,4,2x2,light gray,no
+sheets/thor/walk.png,thor,walk,6,3x2,light gray,no
+sheets/thor/jump.png,thor,jump,4,2x2,light gray,no
+sheets/thor/crouch.png,thor,crouch,2,1 row,light gray,no
+sheets/thor/block.png,thor,block,2,1 row,light gray,no
+sheets/thor/crouch_block.png,thor,crouch_block,2,1 row,light gray,no
+sheets/thor/hitstun.png,thor,hitstun,2,1 row,light gray,no
+sheets/thor/knockdown.png,thor,knockdown,4,2x2,light gray,no
+sheets/thor/getup.png,thor,getup,3,1 row,light gray,no
+sheets/thor/ko.png,thor,ko,4,2x2,light gray,no
+sheets/thor/victory.png,thor,victory,4,2x2,light gray,no
+sheets/thor/parry.png,thor,parry,3,1 row,light gray,no
+sheets/thor/parry_fail.png,thor,parry_fail,3,1 row,light gray,no
+sheets/thor/parried.png,thor,parried,3,1 row,light gray,no
+sheets/thor/grabbed.png,thor,grabbed,2,1 row,light gray,no
+sheets/thor/light.png,thor,light,4,2x2,light gray,no
+sheets/thor/heavy.png,thor,heavy,6,3x2,light gray,no
+sheets/thor/seize.png,thor,seize,5,3 top + 2 bottom,light gray,no
+sheets/thor/seize_throw.png,thor,seize_throw,6,3x2,light gray,no
+sheets/thor/crouch_light.png,thor,crouch_light,3,1 row,light gray,no
+sheets/thor/crouch_heavy.png,thor,crouch_heavy,4,2x2,light gray,no
+sheets/thor/skill_ground.png,thor,skill_ground,6,3x2,light gray,no
+sheets/thor/skill_air.png,thor,skill_air,6,3x2,light gray,no
+sheets/thor/skill_low.png,thor,skill_low,5,3 top + 2 bottom,light gray,no
+sheets/thor/ultimate_1.png,thor,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/thor/ultimate_2.png,thor,ultimate_2,5,3 top + 2 bottom,light gray,no
+sheets/susanoo/cutin.png,susanoo,cutin,1,single image,light gray,no
+sheets/susanoo/idle.png,susanoo,idle,4,2x2,light gray,no
+sheets/susanoo/walk.png,susanoo,walk,6,3x2,light gray,no
+sheets/susanoo/jump.png,susanoo,jump,4,2x2,light gray,no
+sheets/susanoo/crouch.png,susanoo,crouch,2,1 row,light gray,no
+sheets/susanoo/block.png,susanoo,block,2,1 row,light gray,no
+sheets/susanoo/crouch_block.png,susanoo,crouch_block,2,1 row,light gray,no
+sheets/susanoo/hitstun.png,susanoo,hitstun,2,1 row,light gray,no
+sheets/susanoo/knockdown.png,susanoo,knockdown,4,2x2,light gray,no
+sheets/susanoo/getup.png,susanoo,getup,3,1 row,light gray,no
+sheets/susanoo/ko.png,susanoo,ko,4,2x2,light gray,no
+sheets/susanoo/victory.png,susanoo,victory,4,2x2,light gray,no
+sheets/susanoo/parry.png,susanoo,parry,3,1 row,light gray,no
+sheets/susanoo/parry_fail.png,susanoo,parry_fail,3,1 row,light gray,no
+sheets/susanoo/parried.png,susanoo,parried,3,1 row,light gray,no
+sheets/susanoo/grabbed.png,susanoo,grabbed,2,1 row,light gray,no
+sheets/susanoo/light.png,susanoo,light,4,2x2,light gray,yes
+sheets/susanoo/heavy.png,susanoo,heavy,6,3x2,light gray,yes
+sheets/susanoo/seize.png,susanoo,seize,5,3 top + 2 bottom,light gray,no
+sheets/susanoo/seize_throw.png,susanoo,seize_throw,6,3x2,light gray,no
+sheets/susanoo/crouch_light.png,susanoo,crouch_light,3,1 row,light gray,yes
+sheets/susanoo/crouch_heavy.png,susanoo,crouch_heavy,4,2x2,light gray,yes
+sheets/susanoo/skill_ground.png,susanoo,skill_ground,6,3x2,light gray,yes
+sheets/susanoo/skill_air.png,susanoo,skill_air,6,3x2,light gray,yes
+sheets/susanoo/skill_low.png,susanoo,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/susanoo/ultimate_1.png,susanoo,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/susanoo/ultimate_2.png,susanoo,ultimate_2,5,3 top + 2 bottom,light gray,yes
+sheets/anubis/cutin.png,anubis,cutin,1,single image,light gray,no
+sheets/anubis/idle.png,anubis,idle,4,2x2,light gray,no
+sheets/anubis/walk.png,anubis,walk,6,3x2,light gray,no
+sheets/anubis/jump.png,anubis,jump,4,2x2,light gray,no
+sheets/anubis/crouch.png,anubis,crouch,2,1 row,light gray,no
+sheets/anubis/block.png,anubis,block,2,1 row,light gray,no
+sheets/anubis/crouch_block.png,anubis,crouch_block,2,1 row,light gray,no
+sheets/anubis/hitstun.png,anubis,hitstun,2,1 row,light gray,no
+sheets/anubis/knockdown.png,anubis,knockdown,4,2x2,light gray,no
+sheets/anubis/getup.png,anubis,getup,3,1 row,light gray,no
+sheets/anubis/ko.png,anubis,ko,4,2x2,light gray,no
+sheets/anubis/victory.png,anubis,victory,4,2x2,light gray,no
+sheets/anubis/parry.png,anubis,parry,3,1 row,light gray,no
+sheets/anubis/parry_fail.png,anubis,parry_fail,3,1 row,light gray,no
+sheets/anubis/parried.png,anubis,parried,3,1 row,light gray,no
+sheets/anubis/grabbed.png,anubis,grabbed,2,1 row,light gray,no
+sheets/anubis/light.png,anubis,light,4,2x2,light gray,yes
+sheets/anubis/heavy.png,anubis,heavy,6,3x2,light gray,yes
+sheets/anubis/seize.png,anubis,seize,5,3 top + 2 bottom,light gray,no
+sheets/anubis/seize_throw.png,anubis,seize_throw,6,3x2,light gray,no
+sheets/anubis/crouch_light.png,anubis,crouch_light,3,1 row,light gray,yes
+sheets/anubis/crouch_heavy.png,anubis,crouch_heavy,4,2x2,light gray,yes
+sheets/anubis/skill_ground.png,anubis,skill_ground,6,3x2,light gray,no
+sheets/anubis/skill_air.png,anubis,skill_air,6,3x2,light gray,yes
+sheets/anubis/skill_low.png,anubis,skill_low,5,3 top + 2 bottom,light gray,yes
+sheets/anubis/ultimate_1.png,anubis,ultimate_1,5,3 top + 2 bottom,light gray,yes
+sheets/anubis/ultimate_2.png,anubis,ultimate_2,5,3 top + 2 bottom,light gray,yes
+fx/caesar_legionary.png,fx,caesar_legionary,6,3x2,black (additive),n/a
+fx/ragnar_axe_spin.png,fx,ragnar_axe_spin,4,2x2,black (additive),n/a
+fx/musashi_slash.png,fx,musashi_slash,4,2x2,black (additive),n/a
+fx/lapulapu_arc.png,fx,lapulapu_arc,4,2x2,black (additive),n/a
+fx/simo_muzzle_flash.png,fx,simo_muzzle_flash,3,1 row,black (additive),n/a
+fx/simo_tracer.png,fx,simo_tracer,2,1 row,black (additive),n/a
+fx/zeus_lightning_burst.png,fx,zeus_lightning_burst,3,1 row,black (additive),n/a
+fx/zeus_bolt_flight.png,fx,zeus_bolt_flight,4,2x2,black (additive),n/a
+fx/zeus_ground_electricity.png,fx,zeus_ground_electricity,4,2x2,black (additive),n/a
+fx/zeus_sky_bolt.png,fx,zeus_sky_bolt,6,3x2,black (additive),n/a
+fx/thor_hammer_spin.png,fx,thor_hammer_spin,4,2x2,black (additive),n/a
+fx/thor_shockwave.png,fx,thor_shockwave,6,3x2,black (additive),n/a
+fx/susanoo_sword_wave.png,fx,susanoo_sword_wave,4,2x2,black (additive),n/a
+fx/susanoo_serpent_wave.png,fx,susanoo_serpent_wave,6,3x2,black (additive),n/a
+fx/anubis_scale_glyph.png,fx,anubis_scale_glyph,4,2x2,black (additive),n/a
+fx/anubis_spirit_hand.png,fx,anubis_spirit_hand,6,3x2,black (additive),n/a
+fx/hit_spark_light.png,fx,hit_spark_light,3,1 row,black (additive),n/a
+fx/hit_spark_heavy.png,fx,hit_spark_heavy,4,2x2,black (additive),n/a
+fx/block_spark.png,fx,block_spark,3,1 row,black (additive),n/a
+fx/aura_leonidas.png,fx,aura_leonidas,4,2x2,black (additive),n/a
+fx/aura_caesar.png,fx,aura_caesar,4,2x2,black (additive),n/a
+fx/aura_ragnar.png,fx,aura_ragnar,4,2x2,black (additive),n/a
+fx/aura_musashi.png,fx,aura_musashi,4,2x2,black (additive),n/a
+fx/aura_lapulapu.png,fx,aura_lapulapu,4,2x2,black (additive),n/a
+fx/aura_simo.png,fx,aura_simo,4,2x2,black (additive),n/a
+fx/aura_naikhanomtom.png,fx,aura_naikhanomtom,4,2x2,black (additive),n/a
+fx/aura_zeus.png,fx,aura_zeus,4,2x2,black (additive),n/a
+fx/aura_thor.png,fx,aura_thor,4,2x2,black (additive),n/a
+fx/aura_susanoo.png,fx,aura_susanoo,4,2x2,black (additive),n/a
+fx/aura_anubis.png,fx,aura_anubis,4,2x2,black (additive),n/a

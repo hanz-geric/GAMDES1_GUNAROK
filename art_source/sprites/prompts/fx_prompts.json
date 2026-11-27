@@ -1,0 +1,272 @@
+[
+ {
+  "champion": "fx",
+  "anim": "caesar_legionary",
+  "frames": 6,
+  "used_by": "caesar/ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 3 by 2 grid of exactly 6 frames, 3 in the top row and 3 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a ghostly Roman legionary soldier marching to the right, side view, full body, red tunic, bronze helmet with red crest, large rectangular red scutum shield, pilum spear held upright; a translucent pale-gold spectral outline; a 6-step marching walk cycle. This one effect is a person.. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "ragnar_axe_spin",
+  "frames": 4,
+  "used_by": "ragnar/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a small Viking throwing axe spinning end over end in flight, wooden handle and iron head, each frame rotated a quarter turn further, same size in every frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "musashi_slash",
+  "frames": 4,
+  "used_by": "musashi/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: two crossing pale blue-white sword slash arcs forming an X: frame 1 thin start, frame 2 full bright X, frame 3 fading and thinner, frame 4 last wisps. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "lapulapu_arc",
+  "frames": 4,
+  "used_by": "lapulapu/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: one wide horizontal crescent slash arc in pale turquoise and white sweeping left to right: forming, full, thinning, gone to wisps. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "simo_muzzle_flash",
+  "frames": 3,
+  "used_by": "simo/heavy, skill_ground, skill_low, ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a single row of exactly 3 frames side by side, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a rifle muzzle flash pointing right: frame 1 small bright yellow-white star, frame 2 large orange-yellow burst with a cone shape to the right, frame 3 small grey smoke puff. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "simo_tracer",
+  "frames": 2,
+  "used_by": "simo/heavy, skill_ground, skill_low, ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a single row of exactly 2 frames side by side, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a fast bullet tracer flying right: a long thin bright yellow-white streak with a pointed head; frame 2 slightly longer. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "zeus_lightning_burst",
+  "frames": 3,
+  "used_by": "zeus/light",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a single row of exactly 3 frames side by side, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a short burst of golden-yellow lightning crackling forward to the right: small spark, full jagged forked burst, fading sparks. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "zeus_bolt_flight",
+  "frames": 4,
+  "used_by": "zeus/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a golden thunderbolt thrown like a javelin flying right: a zigzag gold lightning bolt shape with white core, small crackling sparks around it, flickering slightly each frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "zeus_ground_electricity",
+  "frames": 4,
+  "used_by": "zeus/skill_low",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: golden electricity crawling along the ground to the right: a low flat band of jagged lightning hugging the bottom edge, growing longer each frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "zeus_sky_bolt",
+  "frames": 6,
+  "used_by": "zeus/ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 3 by 2 grid of exactly 6 frames, 3 in the top row and 3 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a huge vertical golden lightning bolt striking down from the top of the frame to the bottom: frame 1 thin flicker at the top, frame 2 bolt halfway down, frame 3 full bolt top to bottom, frame 4 full bolt with a bright flash burst at the bottom, frame 5 bolt fading with sparks on the ground, frame 6 small sparks only. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "thor_hammer_spin",
+  "frames": 4,
+  "used_by": "thor/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a short-handled iron war hammer spinning end over end in flight, grey iron head and wrapped handle, small blue-white sparks, each frame rotated a quarter turn further. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "thor_shockwave",
+  "frames": 6,
+  "used_by": "thor/skill_low, ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 3 by 2 grid of exactly 6 frames, 3 in the top row and 3 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a ground shockwave spreading outward along the floor from the centre: a low arc of blue-white lightning and flying rock chunks, small at frame 1, widest at frame 3 and 4, breaking apart into sparks and debris by frame 6; everything sits on the bottom edge. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "susanoo_sword_wave",
+  "frames": 4,
+  "used_by": "susanoo/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a crescent-shaped wave of slicing water and wind flying right, deep blue and white foam edge, curling slightly each frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "susanoo_serpent_wave",
+  "frames": 6,
+  "used_by": "susanoo/ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 3 by 2 grid of exactly 6 frames, 3 in the top row and 3 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a huge serpent made of deep blue water and white foam rising from the ground and lunging right with open jaws: rising, rearing up, lunging, fully extended, crashing down, splashing apart into droplets. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "anubis_scale_glyph",
+  "frames": 4,
+  "used_by": "anubis/skill_ground",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a glowing golden Egyptian weighing-scale glyph (balance scale with two pans) in thin gold lines with violet edges, floating, pans tipping slightly differently each frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "anubis_spirit_hand",
+  "frames": 6,
+  "used_by": "anubis/ultimate",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 3 by 2 grid of exactly 6 frames, 3 in the top row and 3 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a giant ghostly spectral hand with long fingers, violet and pale gold, rising from the ground: fingertips appear, hand rises, hand open wide, hand closing, closed fist, dissolving into wisps. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "hit_spark_light",
+  "frames": 3,
+  "used_by": "all light hits",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a single row of exactly 3 frames side by side, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a small white-yellow impact star burst: tiny, full four-point star, fading. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "hit_spark_heavy",
+  "frames": 4,
+  "used_by": "all heavy hits and ultimates",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a large impact burst: orange-white star with radiating spikes, bigger, with small debris specks, fading in the last frame. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "block_spark",
+  "frames": 3,
+  "used_by": "all blocks",
+  "ref": false,
+  "aspect": "16:9",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a single row of exactly 3 frames side by side, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a pale blue-white guard spark: a small burst of sparks shooting up and back from one point, forming, full, fading. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_leonidas",
+  "frames": 4,
+  "used_by": "leonidas/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of deep crimson and bronze energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_caesar",
+  "frames": 4,
+  "used_by": "caesar/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of royal purple and gold energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_ragnar",
+  "frames": 4,
+  "used_by": "ragnar/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of blood red and dark orange energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_musashi",
+  "frames": 4,
+  "used_by": "musashi/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of pale blue-white energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_lapulapu",
+  "frames": 4,
+  "used_by": "lapulapu/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of sea turquoise and white energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_simo",
+  "frames": 4,
+  "used_by": "simo/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of icy white and pale blue energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_naikhanomtom",
+  "frames": 4,
+  "used_by": "naikhanomtom/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of bright orange and red energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_zeus",
+  "frames": 4,
+  "used_by": "zeus/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of gold and white with tiny lightning sparks energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_thor",
+  "frames": 4,
+  "used_by": "thor/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of electric blue-white with tiny lightning sparks energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_susanoo",
+  "frames": 4,
+  "used_by": "susanoo/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of deep blue and white like rushing water energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ },
+ {
+  "champion": "fx",
+  "anim": "aura_anubis",
+  "frames": 4,
+  "used_by": "anubis/ultimate charge",
+  "ref": false,
+  "aspect": "4:3",
+  "prompt": "16-bit pixel art, SNES fighting game style. Special effect sprite sheet: a 2 by 2 grid of exactly 4 frames, 2 in the top row and 2 in the bottom row, read left to right then top to bottom, every frame the same size with wide empty space between frames, effect centred in each frame at the same scale. Effect: a looping fighting-game power-up aura of violet and pale gold energy flames: tall flame tongues rising straight up from the ground on the left and right sides of an EMPTY space shaped like a standing person, wider and taller than a person, open at the top, NOT a ring or circle or portal; solid flat-coloured flame shapes with hard stepped pixel edges, no glow halo; the flame tips shift upward a little each frame so the four frames loop. No character, no person, no hands and no weapon unless named above; only the effect. Limited palette of about 8 colours, bright core and darker edges, hard pixel edges, no anti-aliasing, no soft glow or blur. Plain flat pure black background, no text, no frame borders."
+ }
+]
