@@ -35,9 +35,14 @@ extends Resource
 @export var bare_torso: bool = false
 @export var bare_shins: bool = false
 ## Optional. When set, Fighter uses AnimatedSprite2D instead of the
-## placeholder rig. Expected animations: idle, walk, jump, crouch, block,
-## crouch_block, punch, kick, special, hitstun, knockdown, getup, ko, victory.
+## placeholder rig. Expected Section 14.2 animations:
+## Core: idle, walk, jump, crouch, block, crouch_block, hitstun, knockdown, getup, ko, victory.
+## Defense: parry, parry_fail, parried, grabbed.
+## Normals: light, heavy, seize, seize_throw, crouch_light, crouch_heavy (+ optional directional normals).
+## Skills & Ultimate: skill_ground, skill_air, skill_low, ultimate (optional: intro).
 @export var sprite_frames: SpriteFrames
+## Optional transparent 700x500 portrait shown in the Ultimate side cut-in (Section 8).
+@export var cutin_texture: Texture2D
 
 
 func stat_total() -> int:

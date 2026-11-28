@@ -20,6 +20,16 @@ const ROSTER_PATHS := [
 	"res://data/warriors/crazy_horse.tres",
 	"res://data/warriors/simo_hayha.tres",
 	"res://data/warriors/nai_khanom_tom.tres",
+	"res://data/warriors/zeus.tres",
+	"res://data/warriors/thor.tres",
+	"res://data/warriors/susanoo.tres",
+	"res://data/warriors/anubis.tres",
+]
+const BOSS_PATHS := [
+	"res://data/warriors/zeus.tres",
+	"res://data/warriors/thor.tres",
+	"res://data/warriors/susanoo.tres",
+	"res://data/warriors/anubis.tres",
 ]
 const ZEUS_PATH := "res://data/warriors/zeus.tres"
 
@@ -39,9 +49,13 @@ const STAGES := {
 	&"mythic_summit": {"name": "Mythic Summit", "scene": "res://scenes/stages/stage_3_mythic_summit.tscn"},
 }
 const STAGE_ORDER := [&"ancient_arena", &"battlefield", &"mythic_summit"]
+const PROGRESS_SAVE_PATH := "user://gunarok_progress.cfg"
 
 var mode := ARCADE
 var roster: Array[WarriorData] = []
+var mortal_roster: Array[WarriorData] = []
+var bosses: Array[WarriorData] = []
+var unlocked_gods: Dictionary = {} # StringName -> true (persisted when defeated in Arcade)
 var zeus: WarriorData
 var picks: Array = [null, null]
 var versus_stage: StringName = &"ancient_arena"
@@ -56,10 +70,73 @@ var _tiers: Array[CpuTier] = []
 
 func _ready() -> void:
 	for path in ROSTER_PATHS:
-		roster.append(load(path) as WarriorData)
+		var w := load(path) as WarriorData
+		roster.append(w)
+		if not w.is_boss:
+			mortal_roster.append(w)
+	for bpath in BOSS_PATHS:
+		bosses.append(load(bpath) as WarriorData)
 	zeus = load(ZEUS_PATH) as WarriorData
 	for step in LADDER:
 		_tiers.append(load(step["tier"]) as CpuTier)
+	_load_progress()
+
+
+func _load_progress() -> void:
+	unlocked_gods.clear()
+	var cfg := ConfigFile.new()
+	if cfg.load(PROGRESS_SAVE_PATH) != OK:
+		return
+	for b in bosses:
+		if bool(cfg.get_value("unlocked_gods", String(b.id), false)):
+			unlocked_gods[b.id] = true
+
+
+func _save_progress() -> void:
+	var cfg := ConfigFile.new()
+	for b in bosses:
+		cfg.set_value("unlocked_gods", String(b.id), unlocked_gods.has(b.id))
+	cfg.save(PROGRESS_SAVE_PATH)
+
+
+func is_warrior_unlocked(warrior: WarriorData) -> bool:
+	if warrior == null:
+		return false
+	if not warrior.is_boss:
+		return true
+	return unlocked_gods.has(warrior.id)
+
+
+func unlock_god(god_id: StringName) -> bool:
+	var is_valid_god := false
+	for b in bosses:
+		if b.id == god_id:
+			is_valid_god = true
+			break
+	if not is_valid_god:
+		return false
+	var newly_unlocked := not unlocked_gods.has(god_id)
+	unlocked_gods[god_id] = true
+	_save_progress()
+	return newly_unlocked
+
+
+func unlocked_god_count() -> int:
+	return unlocked_gods.size()
+
+
+func god_unlock_hint(god_id: StringName) -> String:
+	match god_id:
+		&"zeus":
+			return "Defeat Zeus in Arcade\n(Clear with Leonidas)"
+		&"thor":
+			return "Defeat Thor in Arcade\n(Clear with Ragnar or Simo)"
+		&"susanoo":
+			return "Defeat Susanoo in Arcade\n(Clear with Musashi, Lapu-Lapu\nor Nai Khanom Tom)"
+		&"anubis":
+			return "Defeat Anubis in Arcade\n(Clear with Caesar or\nCrazy Horse)"
+		_:
+			return "Defeat this God in Arcade"
 
 
 func is_arcade() -> bool:
@@ -100,13 +177,31 @@ func restart_match() -> void:
 
 
 func _start_run(warrior: WarriorData) -> void:
-	# Five rivals in a fixed order that depends on the warrior picked
-	# (GDD 7.3), then Zeus. No randomness (GDD 6.4).
+	# Five mortal rivals in fixed order, then a Mythic God Boss (Zeus, Thor, Susanoo, or Anubis)!
 	ladder_opponents.clear()
-	var index := roster.find(warrior)
-	for i in range(1, 6):
-		ladder_opponents.append(roster[(index + i) % roster.size()])
-	ladder_opponents.append(zeus)
+	var mortals: Array[WarriorData] = []
+	for w in roster:
+		if not w.is_boss and w != warrior:
+			mortals.append(w)
+	var start_idx := maxi(0, roster.find(warrior)) % maxi(1, mortals.size())
+	for i in range(5):
+		ladder_opponents.append(mortals[(start_idx + i) % mortals.size()])
+	# Pick pantheon god boss matching the warrior (never mirroring yourself if playing a god!).
+	var boss_id := &"zeus"
+	match warrior.id:
+		&"ragnar", &"simo_hayha": boss_id = &"thor"
+		&"musashi", &"lapu_lapu", &"nai_khanom_tom": boss_id = &"susanoo"
+		&"julius_caesar", &"crazy_horse": boss_id = &"anubis"
+		&"zeus": boss_id = &"thor"
+		&"thor": boss_id = &"susanoo"
+		&"susanoo": boss_id = &"anubis"
+		&"anubis": boss_id = &"zeus"
+	var final_boss := zeus
+	for b in bosses:
+		if b.id == boss_id:
+			final_boss = b
+			break
+	ladder_opponents.append(final_boss)
 	ladder_step = 0
 	continues = Balance.ARCADE_CONTINUES
 	score = 0
@@ -143,6 +238,11 @@ func on_match_ended(winner: int, perfect: bool, winner_health: int) -> void:
 			score += gained
 			last_result["gained"] = gained
 			last_result["outcome"] = &"win"
+			var defeated_opp: WarriorData = current_opponent()
+			if defeated_opp != null and defeated_opp.is_boss:
+				var newly := unlock_god(defeated_opp.id)
+				last_result["defeated_god"] = defeated_opp
+				last_result["newly_unlocked_god"] = newly
 			if ladder_step >= LADDER.size() - 1:
 				run_completed.emit(score)
 				return

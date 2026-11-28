@@ -120,15 +120,6 @@ stretch_margin_bottom = 4
 texture_under = ExtResource("2_bar_under")
 texture_progress = ExtResource("3_bar_fill")
 
-[node name="Mark" type="ColorRect" parent="Root/MeterBar1" unique_id=1923954869]
-layout_mode = 1
-offset_left = 129.0
-offset_top = -3.0
-offset_right = 132.0
-offset_bottom = 19.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0.9)
-
 [node name="MeterBar2" type="TextureProgressBar" parent="Root" unique_id=434392875]
 layout_mode = 1
 offset_left = 990.0
@@ -145,15 +136,6 @@ stretch_margin_bottom = 4
 texture_under = ExtResource("2_bar_under")
 texture_progress = ExtResource("3_bar_fill")
 
-[node name="Mark" type="ColorRect" parent="Root/MeterBar2" unique_id=1877562556]
-layout_mode = 1
-offset_left = 128.0
-offset_top = -3.0
-offset_right = 131.0
-offset_bottom = 19.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0.9)
-
 [node name="ReadyLabel1" type="Label" parent="Root" unique_id=1312318250]
 layout_mode = 1
 offset_left = 298.0
@@ -164,7 +146,7 @@ theme_override_colors/font_color = Color(1, 0.9, 0.35, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 18
-text = "SPECIAL READY"
+text = "ULTIMATE READY"
 vertical_alignment = 1
 
 [node name="ReadyLabel2" type="Label" parent="Root" unique_id=1263277184]
@@ -177,7 +159,7 @@ theme_override_colors/font_color = Color(1, 0.9, 0.35, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 18
-text = "SPECIAL READY"
+text = "ULTIMATE READY"
 horizontal_alignment = 2
 vertical_alignment = 1
 

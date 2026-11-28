@@ -1,31 +1,23 @@
 class_name Hurtbox
-extends Area2D
-## The area of a fighter that can be hit. It shrinks while crouching.
+extends RefCounted
+## Pure box-math hurtbox for a fighter (no Area2D physics dependency,
+## Design Plan v3 Section 13.3). Shrinks vertically while crouching.
 
-const STAND_SIZE := Vector2(52.0, 170.0)
-const CROUCH_SIZE := Vector2(56.0, 110.0)
-
-var fighter: Fighter
-var _crouching := false
-var _rect := RectangleShape2D.new()
-
-@onready var _shape_node: CollisionShape2D = $CollisionShape2D
-
-
-func _ready() -> void:
-	fighter = get_parent() as Fighter
-	_shape_node.shape = _rect
-	_apply()
+var crouching := false
 
 
 func set_crouching(value: bool) -> void:
-	if value == _crouching:
-		return
-	_crouching = value
-	_apply()
+	crouching = value
 
 
-func _apply() -> void:
-	var size := CROUCH_SIZE if _crouching else STAND_SIZE
-	_rect.size = size
-	_shape_node.position = Vector2(0.0, -size.y * 0.5)
+func get_rect(origin: Vector2) -> Rect2:
+	var size := Balance.HURTBOX_CROUCH_SIZE if crouching else Balance.HURTBOX_STAND_SIZE
+	return Rect2(origin.x - size.x * 0.5, origin.y - size.y, size.x, size.y)
+
+
+func export_state() -> Dictionary:
+	return {"crouching": crouching}
+
+
+func import_state(data: Dictionary) -> void:
+	crouching = data["crouching"]

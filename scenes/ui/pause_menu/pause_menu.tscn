@@ -94,6 +94,6 @@ theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.06, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 16
-text = "PLAYER 1   Move A / D   Jump W   Crouch S   Punch F   Kick G   Block H   Special T\nPLAYER 2   Arrows   Punch Num 1   Kick Num 2   Block Num 3   Special Num 5\nGAMEPAD   Stick or D-pad   X punch   A kick   LB block   Y special   Start pause"
+text = "PLAYER 1   Move A/D   Jump W   Crouch S   Light F   Heavy G   Seize H   Block/Parry J   Ultimate T   Skills F+G\nPLAYER 2   Arrows   Light ,   Heavy .   Seize /   Block/Parry R-Shift   Ultimate Enter   Skills ,+.\nGAMEPAD   Stick/D-pad   X Light   Y Heavy   A Seize   LB Block/Parry   RB Ultimate   Start Pause"
 horizontal_alignment = 1
 autowrap_mode = 3

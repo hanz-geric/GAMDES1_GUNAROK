@@ -1,35 +1,26 @@
 class_name InputSource
 extends Node
-## Base class for whatever drives a Fighter: a person (PlayerInput) or the
-## CPU (CpuBrain). Fighter.tscn is reused for both (GDD Section 8.4).
+## Base class for whatever drives a Fighter: a human (PlayerInput), the CPU
+## (CpuBrain), or a future network peer. Reads inputs once per 60 Hz tick into
+## a compact bit-field (Design Plan v3 Section 13.3).
+
+const LEFT := 1 << 0
+const RIGHT := 1 << 1
+const UP := 1 << 2
+const DOWN := 1 << 3
+const LIGHT := 1 << 4
+const HEAVY := 1 << 5
+const SEIZE := 1 << 6
+const BLOCK := 1 << 7
+const ULTIMATE := 1 << 8
 
 var fighter: Fighter
 
 
-## Called by the fighter at the start of each physics frame.
-func tick(_delta: float) -> void:
-	pass
-
-
-func get_move_dir() -> int:
+## Called once per 60 Hz simulation tick before the fighter steps.
+## Returns a bitmask of InputSource.* flags.
+func sample_bits() -> int:
 	return 0
-
-
-func wants_jump() -> bool:
-	return false
-
-
-func wants_crouch() -> bool:
-	return false
-
-
-func wants_block() -> bool:
-	return false
-
-
-## Returns &"punch", &"kick", &"special" or &"" for this physics frame.
-func consume_attack() -> StringName:
-	return &""
 
 
 ## Called at the start of every round.

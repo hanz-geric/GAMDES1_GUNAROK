@@ -1,9 +1,8 @@
 class_name PlaceholderRig
 extends Node2D
-## Team-made placeholder art. It draws a warrior from simple shapes in every
-## pose so the build is fully playable before the sprite sheets are done.
-## When a WarriorData has SpriteFrames, Fighter hides this node and plays
-## the AnimatedSprite2D instead. Drawn facing right; Fighter flips scale.x.
+## Team-made placeholder art. Draws a warrior from simple shapes in every
+## Section 14.2 pose so the build stays playable before SpriteFrames are built.
+## Drawn facing right; Fighter flips scale.x.
 
 const THIGH := 46.0
 const SHIN := 44.0
@@ -25,9 +24,11 @@ var torso_color := Color.GRAY
 var leg_color := Color.DIM_GRAY
 var pose: StringName = &"idle"
 var progress := 0.0
-var special_ready := false
+var ultimate_ready := false
+var block_locked := false
 var _time := 0.0
 var _flash := 0.0
+var _flash_color := Color.WHITE
 
 
 class Pose:
@@ -52,14 +53,16 @@ func setup(warrior: WarriorData, alt_palette: bool, outline: Color) -> void:
 	queue_redraw()
 
 
-func set_pose(new_pose: StringName, new_progress: float, is_special_ready: bool) -> void:
+func set_pose(new_pose: StringName, new_progress: float, is_ultimate_ready: bool, is_block_locked: bool = false) -> void:
 	pose = new_pose
 	progress = new_progress
-	special_ready = is_special_ready
+	ultimate_ready = is_ultimate_ready
+	block_locked = is_block_locked
 
 
-func flash() -> void:
+func flash(color: Color = Color.WHITE) -> void:
 	_flash = 1.0
+	_flash_color = color
 
 
 func _process(delta: float) -> void:
@@ -70,8 +73,8 @@ func _process(delta: float) -> void:
 
 # --- Poses -----------------------------------------------------------------
 
-## 0 = guard, 1 = fully extended. Attack progress runs 0 to 0.35 in startup
-## (a short pull-back, the wind-up), 0.35 to 0.55 active, then recovery.
+## 0 = guard, 1 = fully extended. Attack progress runs 0..0.35 startup,
+## 0.35..0.55 active, then recovery.
 func _extension() -> float:
 	if progress < 0.35:
 		return -0.3 * (progress / 0.35)
@@ -107,19 +110,125 @@ func _compute_pose() -> Pose:
 		&"block":
 			_block_arms(p)
 			p.lean = -0.05
-		&"punch":
+		&"parry":
+			p.lean = 0.12
+			p.front_upper = 1.55
+			p.front_lower = 2.65
+			p.back_upper = 0.2
+			p.back_lower = 1.4
+			p.front_thigh = 0.4
+			p.back_thigh = -0.35
+		&"parry_fail":
+			p.lean = 0.22
+			p.front_upper = 0.3
+			p.front_lower = 0.5
+			p.back_upper = -0.3
+			p.back_lower = 0.2
+			p.front_thigh = 0.3
+			p.back_thigh = -0.2
+		&"parried":
+			p.lean = -0.45
+			p.front_upper = -0.2
+			p.front_lower = 0.5
+			p.back_upper = -0.6
+			p.back_lower = 0.1
+			p.front_thigh = 0.35
+			p.back_thigh = -0.25
+		&"light":
 			p.front_upper = lerpf(0.9, 1.62, k) + minf(e, 0.0) * 1.2
 			p.front_lower = lerpf(2.4, 1.62, k) - minf(e, 0.0) * 0.5
 			p.lean = 0.05 + 0.15 * e
 			p.front_thigh = 0.35
 			p.back_thigh = -0.35
-		&"kick":
-			p.front_thigh = lerpf(0.25, 1.2, k) + minf(e, 0.0)
-			p.front_shin = lerpf(0.05, 1.5, k)
-			p.lean = lerpf(0.05, -0.3, k)
-			p.back_thigh = -0.15
-		&"special":
-			p.lean = 0.1 + 0.3 * k
+		&"forward_light":
+			p.front_upper = lerpf(0.9, 1.72, k) + minf(e, 0.0) * 1.2
+			p.front_lower = lerpf(2.3, 1.68, k)
+			p.lean = 0.15 + 0.25 * k
+			p.front_thigh = 0.55 * k + 0.2
+			p.back_thigh = -0.55 * k - 0.15
+		&"back_light":
+			p.front_upper = lerpf(0.9, 1.6, k)
+			p.front_lower = lerpf(2.4, 1.55, k)
+			p.lean = -0.18 * k
+			p.front_thigh = 0.2
+			p.back_thigh = -0.45
+		&"heavy", &"forward_heavy":
+			p.lean = 0.12 + 0.32 * e
+			p.front_upper = lerpf(2.4, 1.35, k) + minf(e, 0.0) * 1.6
+			p.front_lower = lerpf(2.8, 1.45, k)
+			p.back_upper = lerpf(0.8, 1.2, k)
+			p.back_lower = lerpf(2.5, 1.6, k)
+			p.front_thigh = 0.3 + 0.45 * k
+			p.back_thigh = -0.3 - 0.35 * k
+		&"back_heavy":
+			p.lean = -0.1 + 0.15 * k
+			p.front_upper = lerpf(0.6, 2.55, k)
+			p.front_lower = lerpf(1.6, 2.65, k)
+			p.front_thigh = 0.35
+			p.back_thigh = -0.35
+		&"jump_light", &"jump_heavy", &"skill_air":
+			p.lean = 0.35 * k + 0.1
+			p.front_upper = lerpf(2.2, 1.1, k)
+			p.front_lower = lerpf(2.5, 1.2, k)
+			p.front_thigh = 1.15
+			p.front_shin = -0.15
+			p.back_thigh = 0.35
+			p.back_shin = -0.7
+		&"crouch_light":
+			_crouch_legs(p)
+			p.front_upper = lerpf(0.9, 1.55, k)
+			p.front_lower = lerpf(2.2, 1.55, k)
+			p.lean = 0.25 + 0.12 * k
+		&"crouch_heavy":
+			_crouch_legs(p)
+			p.front_thigh = lerpf(1.2, 1.55, k)
+			p.front_shin = lerpf(-0.35, 1.45, k)
+			p.lean = lerpf(0.25, -0.25, k)
+		&"seize":
+			p.lean = 0.22 + 0.15 * k
+			p.front_upper = lerpf(0.8, 1.55, k)
+			p.front_lower = lerpf(1.9, 1.75, k)
+			p.back_upper = lerpf(0.6, 1.45, k)
+			p.back_lower = lerpf(1.8, 1.7, k)
+			p.front_thigh = 0.4
+			p.back_thigh = -0.35
+		&"seize_throw":
+			var t := clampf(progress, 0.0, 1.0)
+			p.lean = lerpf(-0.15, 0.35, t)
+			p.front_upper = lerpf(1.5, 2.2, t)
+			p.front_lower = lerpf(1.8, 1.5, t)
+			p.back_upper = lerpf(1.3, 1.9, t)
+			p.back_lower = lerpf(1.7, 1.4, t)
+			p.front_thigh = 0.45
+			p.back_thigh = -0.4
+		&"grabbed":
+			p.hip = -96.0
+			p.lean = -0.25
+			p.front_upper = 0.2
+			p.front_lower = 1.2
+			p.back_upper = -0.3
+			p.back_lower = 0.8
+			p.front_thigh = 0.5
+			p.front_shin = -0.4
+			p.back_thigh = 0.1
+			p.back_shin = -0.5
+		&"skill_ground":
+			p.lean = 0.12 + 0.28 * k
+			p.front_upper = lerpf(0.8, 1.65, k) + minf(e, 0.0) * 1.4
+			p.front_lower = lerpf(2.3, 1.65, k)
+			p.back_upper = lerpf(0.5, 1.45, k)
+			p.back_lower = lerpf(2.4, 1.65, k)
+			p.front_thigh = 0.35 + 0.45 * k
+			p.back_thigh = -0.35 - 0.45 * k
+		&"skill_low":
+			_crouch_legs(p)
+			p.lean = 0.3 + 0.18 * k
+			p.front_upper = lerpf(0.7, 1.4, k)
+			p.front_lower = lerpf(2.0, 1.35, k)
+			p.front_thigh = lerpf(1.2, 1.45, k)
+			p.front_shin = lerpf(-0.35, 1.25, k)
+		&"ultimate":
+			p.lean = 0.1 + 0.32 * k
 			p.front_upper = lerpf(0.9, 1.6, k) + minf(e, 0.0) * 1.5
 			p.front_lower = lerpf(2.4, 1.6, k)
 			p.back_upper = lerpf(0.5, 1.4, k)
@@ -183,12 +292,11 @@ func _lying(p: Pose) -> void:
 # --- Drawing ---------------------------------------------------------------
 
 func _dir(angle: float) -> Vector2:
-	# Angles are measured from straight down; positive turns toward the front.
 	return Vector2(sin(angle), cos(angle))
 
 
 func _outline() -> Color:
-	return outline_color.lerp(Color.WHITE, clampf(_flash, 0.0, 1.0))
+	return outline_color.lerp(_flash_color, clampf(_flash, 0.0, 1.0))
 
 
 func _draw() -> void:
@@ -217,13 +325,21 @@ func _draw() -> void:
 	var shin_color := skin if data.bare_shins else leg_color
 	var body_color := skin if data.bare_torso else torso_color
 
-	if special_ready:
+	if ultimate_ready:
 		var pulse := 0.5 + 0.5 * sin(_time * 8.0)
 		draw_circle(hip + up * 30.0, 78.0 + pulse * 8.0, Color(data.accent_color, 0.12 + pulse * 0.1))
+	if pose == &"parry":
+		draw_arc(shoulder + Vector2(18.0, 0.0), 58.0, -1.1, 1.1, 20, Color(1.0, 0.88, 0.25, 0.9), 7.0)
+	elif block_locked or pose == &"parry_fail":
+		draw_arc(head + Vector2(0.0, -24.0), 14.0, 0.0, TAU, 16, Color(0.95, 0.35, 0.3, 0.75), 3.0)
+	elif pose == &"parried":
+		for i in 3:
+			var ang := _time * 6.0 + float(i) * TAU / 3.0
+			draw_circle(head + Vector2(cos(ang) * 20.0, -22.0 + sin(ang) * 6.0), 3.5, Color(1.0, 0.88, 0.3))
+
 	if data.cape_color.a > 0.0:
 		_draw_cape(shoulder, hip, up)
 
-	# Back limbs are slightly darker so the pose reads clearly.
 	_limb(shoulder, back_elbow, back_hand, ARM_W, arm_color.darkened(0.22), arm_color.darkened(0.22))
 	draw_circle(back_hand, 6.5, skin.darkened(0.22))
 	if data.weapon == &"dual_katana":
@@ -291,7 +407,6 @@ func _draw_torso(hip: Vector2, shoulder: Vector2, up: Vector2, color: Color) -> 
 	var belt := hip + up * 8.0
 	draw_line(belt - across * 15.0, belt + across * 15.0, leg_color.darkened(0.35), 6.0)
 	if data.id == &"lapu_lapu":
-		# Visayan tattoo lines (pintados)
 		var tattoo := Color(0.18, 0.12, 0.1)
 		for i in 3:
 			var c := hip + up * (22.0 + i * 11.0)
@@ -370,7 +485,6 @@ func _draw_shield(hand: Vector2) -> void:
 
 
 func _draw_arm_band(shoulder: Vector2, elbow: Vector2) -> void:
-	# Muay Thai prajioud on the upper arm
 	var mid := shoulder.lerp(elbow, 0.45)
 	draw_circle(mid, 7.0, Color(0.8, 0.15, 0.15))
 
@@ -427,16 +541,21 @@ func _bolt(a: Vector2, b: Vector2, segments: int, color: Color, width: float) ->
 
 
 func _draw_attack_effects(shoulder: Vector2, hand: Vector2, d: Vector2, foot: Vector2) -> void:
-	if pose != &"punch" and pose != &"kick" and pose != &"special":
+	if not Balance.ATTACKS.has(pose):
 		return
 	if progress < 0.35:
-		# Wind-up flash at the striking hand or foot (GDD 5.4 and IX)
-		var spot := foot if pose == &"kick" else hand
+		var spot := foot if (pose == &"crouch_heavy" or pose == &"skill_low") else hand
 		var size := 8.0 + 6.0 * (progress / 0.35)
-		draw_circle(spot, size + 3.0, Color(1.0, 1.0, 1.0, 0.35))
-		draw_circle(spot, size * 0.6, Color(1.0, 1.0, 0.9, 0.9))
+		var glint := Color(1.0, 0.65, 0.3, 0.9) if pose == &"seize" else Color(1.0, 1.0, 0.9, 0.9)
+		draw_circle(spot, size + 3.0, Color(glint.r, glint.g, glint.b, 0.35))
+		draw_circle(spot, size * 0.6, glint)
 		return
-	if pose != &"special" or progress >= 0.55:
+	if progress >= 0.55:
+		return
+	if pose == &"skill_ground" or pose == &"skill_air" or pose == &"skill_low":
+		draw_arc(shoulder, 64.0, -1.0, 1.0, 16, Color(data.accent_color, 0.8), 6.0)
+		return
+	if pose != &"ultimate":
 		return
 	var reach := data.reach_length() * 1.5 + data.special_reach_bonus
 	match data.weapon:

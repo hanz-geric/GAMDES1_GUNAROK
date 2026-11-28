@@ -4,14 +4,19 @@
 [ext_resource type="Script" uid="uid://cybo2h8tvd0v3" path="res://scenes/fighter/placeholder_rig.gd" id="2_rig"]
 
 [node name="WarriorCard" type="Panel" unique_id=1485980854]
-custom_minimum_size = Vector2(170, 200)
+custom_minimum_size = Vector2(170, 138)
 clip_contents = true
 script = ExtResource("1_card")
 
 [node name="Rig" type="Node2D" parent="." unique_id=1106009706]
-position = Vector2(85, 166)
-scale = Vector2(0.62, 0.62)
+position = Vector2(85, 112)
+scale = Vector2(0.46, 0.46)
 script = ExtResource("2_rig")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(85, 58)
+scale = Vector2(1.0, 1.0)
 
 [node name="NameLabel" type="Label" parent="." unique_id=1899617291]
 layout_mode = 1

@@ -32,7 +32,7 @@ script = ExtResource("3_camera")
 [node name="RoundManager" type="Node" parent="."]
 script = ExtResource("4_round_manager")
 
-[node name="RoundTimer" type="Timer" parent="RoundManager"]
+[node name="RoundTimer" type="Node" parent="RoundManager"]
 script = ExtResource("5_round_timer")
 
 [node name="HUD" parent="." instance=ExtResource("6_hud")]
